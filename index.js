@@ -57,10 +57,17 @@ function renderGame() {
 }
 
 function newCard() {
-  if (isAlive === true && hasBlackJack === false) {
+  if (isAlive === true) {
     let card = getrandomCard();
     sum += card;
     cards.push(card);
     renderGame();
   }
+}
+
+function reSet() {
+  let card = 0;
+  cardsEl.textContent = "cards :" + 0;
+  sumEl.textContent = "sum: " + 0;
+  reSet();
 }
